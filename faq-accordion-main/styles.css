@@ -1,0 +1,53 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lavenderblush;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.content-container{
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0px 1px 10px purple;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+h1{
+    margin-right: auto;
+    font-size: 48px;
+}
+
+.logo{
+    width: 48px;
+    height: 48px;
+}
+
+.section:active{
+    border: 1px solid red;
+}
+
+.section-title:hover{
+    cursor: pointer;
+}
+
+.description{
+    display: none;
+}
