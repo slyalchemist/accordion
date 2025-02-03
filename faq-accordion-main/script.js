@@ -1,16 +1,16 @@
-const sections = document.querySelectorAll(".section-title");
-let i;
+const div = document.querySelectorAll(".section");
 
-for(i = 0; i < sections.length; i++){
-    sections[i].addEventListener("click", () => {
-        this.classList.toggle("active");
+div.forEach((child) => {
+    // and for each one we add a 'click' listener
+    child.addEventListener("click", () => {
+      console.log("clicked!");
+      child.classList.toggle("open");
 
-        let description = this.nextElementSibling;
-        if(description.style.display === "block"){
-            description.style.display = "none";
-        }
-        else{
-            description.style.display = "block";
-        }
+      let description = child.querySelector(".description");
+      if (description.style.display === "block") {
+        description.style.display = "none";
+      } else {
+        description.style.display = "block";
+      }
     });
-}
+  });

@@ -40,14 +40,24 @@ h1{
     height: 48px;
 }
 
-.section:active{
+.section{
+    transition: 0.5s;
+    padding: 8px;
+}
+
+.section:hover{
+    background-color:beige;
+}
+
+.open{
     border: 1px solid red;
 }
 
-.section-title:hover{
+.section:hover{
     cursor: pointer;
 }
 
 .description{
     display: none;
+    padding: 12px;
 }
