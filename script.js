@@ -1,10 +1,11 @@
 const div = document.querySelectorAll(".section");
 
 div.forEach((child) => {
-    // and for each one we add a 'click' listener
+    //for each section, add event listener
     child.addEventListener("click", () => {
       console.log("clicked!");
 
+      //after event, make description visible
       let description = child.querySelector(".description");
       if (description.style.display === "block") {
         description.style.display = "none";
@@ -12,6 +13,7 @@ div.forEach((child) => {
         description.style.display = "block";
       }
 
+      //target symbol, change to minus
       let sectionTitle = child.querySelector(".section-title");
       let symbol = sectionTitle.querySelector(".symbol");
       symbol.classList.toggle("minus");
