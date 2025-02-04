@@ -4,7 +4,6 @@ div.forEach((child) => {
     // and for each one we add a 'click' listener
     child.addEventListener("click", () => {
       console.log("clicked!");
-      child.classList.toggle("open");
 
       let description = child.querySelector(".description");
       if (description.style.display === "block") {
@@ -12,5 +11,9 @@ div.forEach((child) => {
       } else {
         description.style.display = "block";
       }
+
+      let sectionTitle = child.querySelector(".section-title");
+      let symbol = sectionTitle.querySelector(".symbol");
+      symbol.classList.toggle("minus");
     });
   });
